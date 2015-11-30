@@ -1,2 +1,0 @@
-# kharon
-Desarrollo Aplicativo Geoespacial
