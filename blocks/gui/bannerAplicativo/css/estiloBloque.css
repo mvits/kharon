@@ -4,9 +4,9 @@
 
 
 #marcoGeneral {
-	width: 99%;
+	width: 95%;
 	top: -3px;
-	background-image: url("images/imagen.JPG");
+	background-image: url("images/mundoporlanoche.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center 25%;
@@ -14,7 +14,7 @@
 
 #fondo_texto {
 	position: relative;
-	opacity: 0.35;
+	opacity: 0.9;
 	top: 1%;
 	width: 100%;
 	max-width: 100%;

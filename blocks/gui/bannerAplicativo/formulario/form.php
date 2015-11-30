@@ -42,10 +42,11 @@ class Formulario {
 			{
 				?>
 
+<BR>
+<BR>
+<h3>ANÁLISIS DE AMENAZAS NATURALES</h3>
+<h3>DEPARTAMENTO DE NARIÑO</h3>
 
-<h3>SISTEMA DE GESTIÓN RIESGO A LA NAVEGACIÓN</h3>
-<h3>DE DISEÑO DE CANALES</h3>
-<h2>HIPOCAMPO</h2>
 
 <?php
 			}
