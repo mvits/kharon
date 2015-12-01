@@ -7,52 +7,54 @@ $rutaBloque .= $esteBloque ['grupo'] . "/" . $esteBloque ['nombre'];
 $directorio = $this->miConfigurador->getVariableConfiguracion ( "host" );
 $directorio .= $this->miConfigurador->getVariableConfiguracion ( "site" ) . "/index.php?";
 $directorio .= $this->miConfigurador->getVariableConfiguracion ( "enlace" );
-$miSesion = Sesion::singleton ();
+
 
 // **********Index Inicio**************//
 
-$enlaceIndexAplicativo ['enlace'] = "pagina=indexAplicativo";
-// $enlaceIndexAplicativo ['enlace'] .= "&usuario=" . $_REQUEST ['usuario'];
+$enlaceIndexAplicativo ['enlace'] = "pagina=index";
+
 $enlaceIndexAplicativo ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceIndexAplicativo ['enlace'], $directorio );
 
 // **********Gestión Zona Estudio**************//
 
-$enlaceZonaEstudio ['enlace'] = "pagina=zonaEstudio";
-// $enlaceZonaEstudio ['enlace'] .= "&usuario=" . $_REQUEST ['usuario'];
+$enlaceZonaEstudio ['enlace'] = "pagina=index";
+$enlaceZonaEstudio ['enlace'] = "&informacion=ZonaEstudio";
+
 $enlaceZonaEstudio ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceZonaEstudio ['enlace'], $directorio );
-$enlaceZonaEstudio ['nombre'] = "Descripción Zona Estudio";
+
+
+// **********Consultas**************//
+
+$enlaceConsulta1 ['enlace'] = "pagina=index";
+$enlaceConsulta1 ['enlace'] = "&informacion=Consulta1";
+
+$enlaceConsulta1 ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceConsulta1 ['enlace'], $directorio );
 
 
 
+$enlaceConsulta2 ['enlace'] = "pagina=index";
+$enlaceConsulta2 ['enlace'] = "&informacion=Consulta2";
 
-
-// **********Administrador Datos Geograficos**************//
-
-$enlaceAdministradorGeografico ['enlace'] = "pagina=administrador";
-// $enlaceAdministradorGeografico ['enlace'] .= "&usuario=" . $_REQUEST ['usuario'];
-$enlaceAdministradorGeografico ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceAdministradorGeografico ['enlace'], $directorio );
-$enlaceAdministradorGeografico ['nombre'] = "Administrador";
+$enlaceConsulta2 ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceConsulta2 ['enlace'], $directorio );
 
 
 
+$enlaceConsulta3 ['enlace'] = "pagina=index";
+$enlaceConsulta3 ['enlace'] = "&informacion=Consulta3";
 
-// **********Visualizador Datos Geograficos**************//
-
-$enlaceVisualizadorGeografico ['enlace'] = "pagina=visualizador";
-// $enlaceVisualizadorGeografico ['enlace'] .= "&usuario=" . $_REQUEST ['usuario'];
-$enlaceVisualizadorGeografico ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceVisualizadorGeografico ['enlace'], $directorio );
-$enlaceVisualizadorGeografico ['nombre'] = "Visualizador";
+$enlaceConsulta3 ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceConsulta3 ['enlace'], $directorio );
 
 
+$enlaceConsulta4 ['enlace'] = "pagina=index";
+$enlaceConsulta4 ['enlace'] = "&informacion=Consulta4";
+
+$enlaceConsulta4 ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceConsulta4 ['enlace'], $directorio );
 
 
-// **********Visualizador Datos Geograficos**************//
+$enlaceConsulta5 ['enlace'] = "pagina=index";
+$enlaceConsulta5 ['enlace'] = "&informacion=Consulta5";
 
-$enlaceAplicativo ['enlace'] = "index.php";
-$enlaceAplicativo ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceVisualizadorGeografico ['enlace'], $directorio );
-$enlaceAplicativo ['nombre'] = "Cerrar Session";
-
-
+$enlaceConsulta5 ['urlCodificada'] = $this->miConfigurador->fabricaConexiones->crypto->codificar_url ( $enlaceConsulta5 ['enlace'], $directorio );
 
 
 
@@ -68,10 +70,18 @@ $enlaceAplicativo ['nombre'] = "Cerrar Session";
     		
     		<div class="box">
 	    		<ul>
-	    			<li><a href="#"><i class="icon-home"></i> home</a></li>
-	    			<li><a href="#"><i class="icon-file-alt"></i> about</a></li>
-	    			<li><a href="#"><i class="icon-copy"></i> works</a></li>
-	    			<li><a href="#"><i class="icon-envelope"></i> contacts</a></li>
+	    			<li><a href="<?php echo $enlaceIndexAplicativo['urlCodificada']; ?>"><i class="icon-home"></i>Inicio</a></li>
+	    			<li><a href="<?php echo $enlaceZonaEstudio['urlCodificada']; ?>"><i class="icon-location-arrow"></i>Información Geográfica</a></li>
+	    			<br>
+	    			<li><a href="<?php echo $enlaceConsulta1 ['urlCodificada'];?>"><i class="icon-share-sign"></i>¿Cuáles son los municipios que se encuentran en grado de amenaza 'Alto' del Volcán Galéras?</a></li>
+	    			<br>
+	    			<li><a href="<?php echo $enlaceConsulta2 ['urlCodificada'];?>"><i class="icon-share-sign"></i>¿Cuál es el municipio con mayor riesgo dado la zona de influencia del RÍO PATÍA la cual esta relacionada con el área del ronda de río de 30 Metros ?</a></li>
+	    			<br>
+	    			<li><a href="<?php echo $enlaceConsulta3 ['urlCodificada'];?>"><i class="icon-share-sign"></i>¿Cuál es el Municipio con Mayor Cantidad de Eventos Sísmicos en el departamento de Nariño desde el año 2005?</a></li>
+	    			<br>
+	    			<li><a href="<?php echo $enlaceConsulta4 ['urlCodificada'];?>"><i class="icon-share-sign"></i>¿Cuáles son los municipios del departamento de Nariño que fueron afectados por un sismo de mayor magnitud en un  radio de 100 Kilómetros en los últimos 5 años?</a></li>
+	    			<br>	
+	    			<li><a href="<?php echo $enlaceConsulta5 ['urlCodificada'];?>"><i class="icon-share-sign"></i>¿Cuál es la Cuenca Hidrográfica que posee mayor área de influencia de la amenaza Volcánica de grado 'Alto' del Volcán Galéras?</a></li>	    			
 	    		</ul>
     		</div>
     		

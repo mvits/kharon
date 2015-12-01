@@ -136,6 +136,52 @@ class pie {
 					$tab ++;
 					echo $this->miFormulario->campoTexto ( $atributos );
 					unset ( $atributos );
+					
+					
+					$esteCampo = 'mensajePie3';
+					$atributos ["id"] = $esteCampo;
+					$atributos ["estilo"] = $esteCampo;
+					$atributos ['columnas'] = 1;
+					$atributos ["estilo"] = "textoSubtituloCursiva";
+					$atributos ['texto'] = $this->lenguaje->getCadena ( $esteCampo );
+					$tab ++;
+					echo $this->miFormulario->campoTexto ( $atributos );
+					unset ( $atributos );
+				
+					echo "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+					$esteCampo = 'enlaceSara';
+					$atributos ['id'] = $esteCampo;
+					$atributos ['enlace'] = $this->lenguaje->getCadena ( $esteCampo );
+					$atributos ['columnas'] = 1;
+					// $atributos ['estilo'] = 'jquery';
+					$atributos ['enlaceImagen'] = $this->miConfigurador->getVariableConfiguracion ( 'rutaUrlBloque' ) . 'css/imagen/LogoSara.png';
+						
+					$atributos ['ancho'] = '30%';
+					$atributos ['alto'] = '100%';
+						
+					$tab ++;
+					echo $this->miFormulario->enlace ( $atributos );
+					unset ( $atributos );
+					echo "&nbsp&nbsp";
+					
+					$esteCampo = 'enlaceOpenGeo';
+					$atributos ['id'] = $esteCampo;
+					$atributos ['enlace'] = $this->lenguaje->getCadena ( $esteCampo );
+					$atributos ['columnas'] = 1;
+					// $atributos ['estilo'] = 'jquery';
+					$atributos ['enlaceImagen'] = $this->miConfigurador->getVariableConfiguracion ( 'rutaUrlBloque' ) . 'css/imagen/logo.png';
+						
+					$atributos ['ancho'] = '40%';
+					$atributos ['alto'] = '100%';
+						
+					$tab ++;
+					echo $this->miFormulario->enlace ( $atributos );
+					unset ( $atributos );
+					
+
+					
+					
+					
 				}
 				
 				echo $this->miFormulario->division ( "fin" );

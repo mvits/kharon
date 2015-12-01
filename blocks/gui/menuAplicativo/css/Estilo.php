@@ -6,6 +6,7 @@ $estilo[$indice++]="style.css";
 
 
 
+
 $rutaBloque=$this->miConfigurador->getVariableConfiguracion("host");
 $rutaBloque.=$this->miConfigurador->getVariableConfiguracion("site");
 

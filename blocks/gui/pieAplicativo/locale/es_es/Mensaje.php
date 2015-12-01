@@ -8,8 +8,10 @@ Javier Orlando Fernández Campos
 Michael Stiv Verdugo Marquez
 		stivmarquez.ud@gmail.com
 		
-PROYECTO BASES DE DATOS ESPACIALES		
-";
+PROYECTO BASES DE DATOS ESPACIALES";
+$this->idioma["mensajePie3"]="<B>Powered by:</B><br><br>";
+
+
 
 $this->idioma["mensajeResolucion"]="Si desea consultar la Resolución No.001 de 2001.
 		 Dirijase al Siguiente link :";
@@ -23,6 +25,8 @@ $this->idioma["redesSociales"]="Redes Sociales :";
 $this->idioma["link_reso"]="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspResolución No.001 de 2001";
 
 
+$this->idioma['enlaceSara']='https://github.com/frameworksara/sara';
+$this->idioma['enlaceOpenGeo']='http://boundlessgeo.com/';
 $this->idioma['enlaceDistrital']='http://www.udistrital.edu.co/';
 $this->idioma['enlaceCondor']='https://condor.udistrital.edu.co/appserv/';
 $this->idioma['enlaceProveedores']='https://portalws.udistrital.edu.co/proveedor/';
